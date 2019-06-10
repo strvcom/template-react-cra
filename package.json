@@ -1,0 +1,84 @@
+{
+  "name": "PROJECT_NAME",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "/",
+  "author": "YOUR_NAME",
+  "scripts": {
+    "analyze": "react-scripts analyze",
+    "build": "react-scripts build",
+    "format": "prettier --write 'src/**/*.{js,ts,tsx,css,md,json}'",
+    "lint": "eslint src",
+    "lint:css": "stylelint src",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@strv/react-scripts": "^3.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router-dom": "^5.0.1",
+    "sanitize.css": "^10.0.0",
+    "styled-components": "^4.3.1",
+    "typescript": "3.5.1"
+  },
+  "devDependencies": {
+    "@strv/eslint-config-react": "^2.0.0",
+    "@strv/eslint-config-typescript": "^1.1.1",
+    "@strv/stylelint-config-styled-components": "^1.0.1",
+    "@types/jest": "24.0.13",
+    "@types/node": "12.0.7",
+    "@types/react": "16.8.19",
+    "@types/react-dom": "16.8.4",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/webpack-env": "^1.13.6",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn type-check"
+    }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
