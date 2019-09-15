@@ -8,7 +8,7 @@
     "analyze": "react-scripts analyze",
     "build": "react-scripts build",
     "format": "prettier --write 'src/**/*.{js,ts,tsx,css,md,json}'",
-    "lint": "eslint src",
+    "lint": "eslint 'src/**/*.ts'",
     "lint:css": "stylelint src",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
