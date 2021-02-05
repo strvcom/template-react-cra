@@ -21,7 +21,7 @@
     "react-router-dom": "^5.0.1",
     "sanitize.css": "^10.0.0",
     "styled-components": "^4.3.2",
-    "typescript": "3.5.2"
+    "typescript": "3.5.3"
   },
   "devDependencies": {
     "@strv/eslint-config-react": "^3.0.0",
